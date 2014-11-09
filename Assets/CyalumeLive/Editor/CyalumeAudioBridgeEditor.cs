@@ -83,6 +83,12 @@ public sealed class CyalumeAudioBridgeEditor : Editor
 		if (audioObject != bridge.audioObject) {
 			bridge.audioObject = audioObject;
 		}
+
+		if (GUI.changed) {
+			EditorUtility.SetDirty(bridge);
+			serializedObject.ApplyModifiedProperties();
+			Debug.Log ("hoge");
+		}
 	}
 
 	void DrawAudioInspector()
