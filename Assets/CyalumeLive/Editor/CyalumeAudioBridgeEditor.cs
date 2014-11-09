@@ -86,8 +86,6 @@ public sealed class CyalumeAudioBridgeEditor : Editor
 
 		if (GUI.changed) {
 			EditorUtility.SetDirty(bridge);
-			serializedObject.ApplyModifiedProperties();
-			Debug.Log ("hoge");
 		}
 	}
 
